@@ -1,3 +1,6 @@
+
+// ----------dark mode icon----------
+
 const toggle = document.querySelector(".toggle_icon");
 
 toggle.addEventListener("click", () => {

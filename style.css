@@ -4,6 +4,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -19,10 +23,16 @@
 }
 
 
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
 body {
+
     background: var(--primary-color);
     color: var(--secondary-color);
-    overflow-x: hidden;
+    max-width: 1450px;
 }
 
 
@@ -33,7 +43,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 7%;
+    padding: 2rem 7%;
     background: transparent;
     display: flex;
     align-items: center;
@@ -41,7 +51,7 @@ body {
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 2.5rem;
     color: var(--main-color);
     text-decoration: none;
     font-weight: 600;
@@ -54,11 +64,11 @@ body {
 .navbar a {
     position: relative;
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
-    margin-right: 35px;
+    margin-right: 3.5rem;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
@@ -72,7 +82,7 @@ body {
     left: 0;
     bottom: -6px;
     width: 100%;
-    height: 2px;
+    height: .2rem;
     background: var(--primary-color);
 }
 
@@ -89,9 +99,24 @@ body {
 }
 
 .toggle .toggle_icon {
-    font-size: 24px;
+    font-size: 2.2rem;
     color: var(--primary-color);
+    padding-bottom: .4rem;
 
+}
+
+
+.icons {
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    left: 93%;
+}
+
+#check {
+    display: none;
 }
 
 
@@ -102,18 +127,18 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 60px 7% 0;
+    padding: 6rem 7% 0;
 
 }
 
 .home .home_content {
-    max-width: 440px;
+    max-width: 44rem;
 
 }
 
 .home_content h3 {
-    font-size: 30px;
-    line-height: 10px;
+    font-size: 3rem;
+    line-height: 1rem;
     font-weight: 500;
     animation: slideRight 1s ease forwards;
     animation-delay: .7s;
@@ -121,7 +146,7 @@ body {
 
 
 .home_content h1 {
-    font-size: 55px;
+    font-size: 5.5rem;
     font-weight: 600;
     margin-bottom: 3px;
     animation: slideRight 1s ease forwards;
@@ -131,7 +156,7 @@ body {
 
 
 .home_content p {
-    font-size: 16px;
+    font-size: 1.6rem;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
@@ -140,16 +165,16 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 35px;
+    width: 3.5rem;
+    height: 3.5rem;
     background: transparent;
     border: 2px solid var(--main-color);
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
-    font-size: 20px;
+    font-size: 2rem;
     color: var(--main-color);
     text-decoration: none;
-    margin: 20px 15px 30px 0;
+    margin: 2rem 1.5rem 3rem 0;
     transition: .5s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
@@ -164,7 +189,7 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 1rem 2.5rem;
     background: var(--main-color);
     border-radius: 6px;
     border: 2px solid transparent;
@@ -222,29 +247,29 @@ body {
     align-items: center;
     color: var(--main-color);
     background: var(--primary-color);
-    padding: 13px 0;
+    padding: 1.3rem 0;
 
 }
 
 .profession_box .profession:nth-child(1) i {
-    margin-right: 12px;
+    margin-right: 1.2rem;
 }
 
 .profession_box .profession:nth-child(2) {
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
 }
 
 .profession_box .profession:nth-child(4) {
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
 }
 
 
 .profession i {
-    font-size: 38px;
+    font-size: 3.6rem;
 }
 
 .profession h3 {
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 1;
     font-weight: 600;
 
@@ -275,8 +300,8 @@ body {
 
 .home_img img {
     position: absolute;
-    bottom: 0;
-    right: 2%;
+    bottom: -2.8rem;
+    right: 1%;
     width: 30%;
     pointer-events: none;
     opacity: 0;
@@ -326,23 +351,236 @@ body {
 
 @keyframes professionRotate {
 
-    0%,20% {
+    0%,
+    20% {
         transform: rotate(0deg)
     }
 
-    25%,45% {
+    25%,
+    45% {
         transform: rotate(-90deg)
     }
 
-    50%,70% {
+    50%,
+    70% {
         transform: rotate(-180deg)
     }
 
-    75%,95% {
+    75%,
+    95% {
         transform: rotate(-270deg)
     }
 
     100% {
         transform: rotate(-360deg)
     }
+}
+
+
+
+/* ------BREAKPOINS------- */
+
+@media screen and (max-width:1450px) {
+
+    .home_img img {
+
+        position: absolute;
+        bottom: 12%;
+        right: 1%;
+        width: 32%;
+        pointer-events: none;
+
+    }
+
+}
+
+
+@media screen and (max-width:1400px) {
+
+
+    html {
+        font-size: 60%;
+    }
+
+
+    .home .profession_container {
+        height: 85.8rem;
+    }
+
+    .home .profession_container .profession_box {
+        right: -5rem;
+        height: 80rem;
+    }
+
+    .home_img img {
+
+        position: absolute;
+        bottom: 12%;
+        right: 0;
+        width: 35%;
+        pointer-events: none;
+
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .home_img img {
+
+        bottom: 13.3%;
+        right: 0;
+        width: 35%;
+        pointer-events: none;
+
+    }
+
+    .home .profession_container {
+        height: 85.8rem;
+    }
+
+    .home .profession_container .profession_box {
+        right: -12rem;
+        height: 85.8rem;
+    }
+
+    .home .profession_container .overlay {
+        right: -9rem;
+    }
+
+}
+
+/* ---------------------------- */
+
+
+
+@media screen and (max-width:1090px) {
+
+    .home_img img {
+
+        position: absolute;
+        bottom: 13rem;
+        right: 0;
+        width: 40%;
+        pointer-events: none;
+
+    }
+
+    .header {
+        padding: 2rem 3%;
+    }
+
+    .home,
+    .profession_container .profession_box {
+        right: -22rem;
+    }
+
+    .home,
+    .profession_container .overlay {
+        right: -15rem;
+    }
+
+}
+
+
+
+@media screen and (max-width:1050px) {
+
+    .home .home_content {
+        max-width: 50rem;
+    }
+
+    .home .profession_container .profession_box {
+        right: -45rem;
+    }
+
+    .home .profession_container .overlay {
+        right: -38rem;
+    }
+
+    .home_img img {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    .icons {
+        display: block;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+
+    .toggle {
+        position: absolute;
+        color: var(--primary-color);
+        left: 88%;
+
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        padding: .7rem 3%;
+        background: var(--main-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    
+        #check:checked~.navbar {
+            height: 27rem;
+            box-shadow: none;
+            background: transparent;
+
+        }
+
+        .navbar a {
+            color: var(--main-color);
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+        }
+
+        .navbar a.active {
+            color: blue;
+        }
+
+        .navbar a.active::before {
+            display: none;
+
+        }
+
+        .dark-mode .navbar a {
+            color: #fff;
+        }
+
+
+        .navbar a:nth-child(2),
+        .navbar a:nth-child(3),
+        .navbar a:nth-child(4) {
+            color: gray;
+
+        }
 }

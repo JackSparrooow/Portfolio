@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+
     <style>
 
     </style>
@@ -21,7 +22,19 @@
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
 
-        <nav class="navbar">
+        <!-- -------------menu toggal button----------- -->
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <!-- ------------End here--------- -->
+
+        <!-- -----------Navbar started----------- -->
+
+        <nav class="navbar" id="myNavbar">
             <a href="#" style="--i:12;" class="active">Home</a>
             <a href="#" style="--i:13;">About</a>
             <a href="#" style="--i:14;">Skills</a>
@@ -29,8 +42,9 @@
         </nav>
 
         <div class="toggle">
-            <i class='bx bx-moon toggle_icon'></i>
+            <i class='bx bx-moon toggle_icon' id="darkmode_icon"></i>
         </div>
+
     </header>
 
     <!-- ------------Home section------------ -->
@@ -49,6 +63,8 @@
             </div>
             <a href="#" class="btn">Download CV</a>
         </div>
+
+        <!-- ------------profession content --------------- -->
 
         <div class="profession_container">
             <div class="profession_box">
@@ -75,8 +91,9 @@
         <div class="home_img">
             <img src="images/home.png" alt="">
         </div>
-
     </section>
+
+    <!-- ---------------Landing Page Ended here------------- -->
 
 
 
@@ -84,6 +101,7 @@
 
     <!-- -----------js link------------ -->
     <script src="script.js"></script>
+
 </body>
 
 </html>
